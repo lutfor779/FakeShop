@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
+import NotFound from "./components/NotFound";
 import SingleProduct from "./components/SingleProduct";
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home products={products} />}></Route>
 				<Route path="proudcts/:id" element={<SingleProduct />} />
-				<Route path="*" element={<h1>Not Found</h1>} />
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	);
