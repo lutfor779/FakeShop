@@ -1,11 +1,13 @@
 import React from "react";
+import Footer from "../Shared/Footer";
 import Header from "../Shared/Header";
+import Loading from "../Shared/Loading";
 import Banner from "./Banner";
 import Products from "./Products";
 
 const Home = ({ products }) => {
 	if (!products) {
-		return <p>Loading...</p>;
+		return <Loading />;
 	}
 
 	return (
@@ -13,6 +15,7 @@ const Home = ({ products }) => {
 			<Header />
 			<Banner />
 			<Products products={products} />
+			<Footer />
 		</article>
 	);
 };
