@@ -1,14 +1,20 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Products = ({ products }) => {
+	const navigate = useNavigate();
+
 	return (
 		<Container className="pt-5">
-			<h4>Some Products</h4>
+			<h4>Latest Products</h4>
 			<Row xs={1} md={2} lg={3} className="g-4">
 				{products.map((item) => (
 					<Col key={item.id}>
-						<Card className="h-100">
+						<Card
+							className="h-100"
+							onClick={() => navigate(`proudcts/${item.id}`, { replace: true })}
+						>
 							<Card.Img variant="top" src={item.image} alt={item.title} />
 							<Card.Body>
 								<Card.Title>{item.title}</Card.Title>
