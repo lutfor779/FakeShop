@@ -55,3 +55,32 @@
 	background-color: transparent;
 	border: 0;
 }
+
+/* Product details page */
+/* Inner banner */
+.innerColor {
+	background: linear-gradient(to right, #141e30aa, #243b55aa);
+	height: 20vh;
+}
+.innerContent {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+}
+
+/* Product image */
+.productImage {
+	max-height: 65vh;
+	object-fit: contain;
+}
+
+/* rating */
+.checked {
+	color: orange;
+}
