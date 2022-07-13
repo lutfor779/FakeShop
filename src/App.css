@@ -1,7 +1,40 @@
+/* carousel */
+.carousel-img {
+	height: 400px;
+	object-fit: cover;
+	opacity: 0.5;
+}
+@media screen and (max-width: 679px) {
+	.carousel-img {
+		height: 200px;
+	}
+}
+@media screen and (min-width: 680px) and (max-width: 991px) {
+	.carousel-img {
+		height: 280px;
+	}
+}
+
 /* card */
+.card {
+	transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+	box-shadow: rgba(0, 0, 0, 0.2) 6px 2px 16px 0px,
+		rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.card:hover .card-footer,
+.card:hover .card-body {
+	background-color: #212529;
+	color: #fff;
+}
+
 .card-img-top {
 	height: 15rem;
 	object-fit: contain;
+	padding: 5px;
 }
 
 .card-title {
